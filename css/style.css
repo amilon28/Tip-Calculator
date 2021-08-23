@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.801)),
+    url("../img/pexels-cottonbro-4255412.jpg");
+
+  background-color: #112233;
+  animation: animateGradient 100s ease-in-out infinite alternate;
+
+  opacity: 0;
+  transition: opacity 2.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tip-container {
+  background-color: #80ff4e;
+  width: 20vw;
+  height: 70vh;
+  /* margin: 0rem auto 0; */
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #758fd8, #111111);
+  background-size: 400% 400%;
+  animation: animateGradient 12s ease-in-out infinite alternate;
+}
+
+input {
+  font-family: inherit;
+  border-radius: 0.3rem;
+  border: 1px solid #464646;
+  height: 2.5rem;
+  width: 80%;
+  outline: none;
+  font-size: inherit;
+  font-weight: bolder;
+}
+
+.bill-amount {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bill-amount input {
+  margin-left: 2rem;
+  padding: 2rem 1rem;
+}
+
+.bill-amount label {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.7rem;
+}
+
+.Opinion {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Opinion h3 {
+  display: inline-block;
+}
+
+.people {
+  font-weight: 700;
+}
+
+#numOfpeople {
+  margin-top: 2rem;
+  padding: 2rem 1.2rem;
+}
+.calc-btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #812c12;
+  font-weight: bold;
+  cursor: pointer;
+  color: #141414;
+  transition: all 0.3s;
+}
+
+.calc-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 1px #0f0f0f;
+  color: #fff;
+}
+
+.calc-btn:active {
+  transform: translateY(2px);
+  box-shadow: 1px 2px 1px #0f0f0f;
+}
+
+select {
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+
+.invalid-bill {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tip {
+  height: 10vh;
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 85%;
+  visibility: hidden;
+  background: linear-gradient(
+    to right bottom,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: all 0.2s;
+}
